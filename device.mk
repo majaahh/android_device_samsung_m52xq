@@ -14,8 +14,6 @@
 # limitations under the License.
 #
 
-DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
-
 # call the common setup
 $(call inherit-product, device/samsung/sm7325-common/common.mk)
 
@@ -35,6 +33,12 @@ PRODUCT_COPY_FILES += \
 # Fingerprint Gestures
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/keylayout/uinput-sec-fp.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/uinput-sec-fp.kl
+
+# Overlays
+PRODUCT_PACKAGES += \
+    FrameworkResOverlayDevice \
+    SettingsProviderOverlayDevice \
+    SystemUIOverlayDevice
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
