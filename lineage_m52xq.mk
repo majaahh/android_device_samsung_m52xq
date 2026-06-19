@@ -1,50 +1,17 @@
 #
-# Copyright (C) 2023 The LineageOS Project
-#
-# Licensed under the Apache License, Version 2.0 (the "License");
-# you may not use this file except in compliance with the License.
-# You may obtain a copy of the License at
-#
-#      http://www.apache.org/licenses/LICENSE-2.0
-#
-# Unless required by applicable law or agreed to in writing, software
-# distributed under the License is distributed on an "AS IS" BASIS,
-# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-# See the License for the specific language governing permissions and
-# limitations under the License.
+# SPDX-FileCopyrightText: The LineageOS Project
+# SPDX-License-Identifier: Apache-2.0
 #
 
 # Inherit device configuration
 $(call inherit-product, device/samsung/m52xq/device.mk)
 
-# Inherit from the 64 bit configuration
-$(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
-
-# Inherit from the common Open Source product configuration
-TARGET_SUPPORTS_OMX_SERVICE := false
-$(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
-
-# Inherit some common Lineage stuff
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
-
-# Boot animation
-TARGET_SCREEN_HEIGHT := 2400
-TARGET_SCREEN_WIDTH := 1080
-
-# NFC
-TARGET_HAVE_SEC_NFC := true
-
-## Device identifier. This must come after all inclusions
+# Device identifier. This must come after all inclusions
 PRODUCT_NAME := lineage_m52xq
 PRODUCT_DEVICE := m52xq
-PRODUCT_BRAND := samsung
-PRODUCT_MODEL := SM-M526B
-PRODUCT_MANUFACTURER := samsung
-PRODUCT_GMS_CLIENTID_BASE := android-samsung
+PRODUCT_MODEL := SM-M526BR
 
-PRODUCT_SHIPPING_API_LEVEL := 30
-
-# Vendor fingerprint
+# GMS
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    BuildFingerprint="samsung/m52xqins/m52xq:11/RP1A.200720.012/M526BXXS6CXJ2:user/release-keys" \
-    BuildDesc="m52xqins-user 11 RP1A.200720.012 M526BXXS6CXJ2 release-keys"
+    BuildFingerprint="samsung/m52xqxx/m52xq:11/RP1A.200720.012/M526BRXXS7CYE1:user/release-keys" \
+    BuildDesc="m52xqxx-user 11 RP1A.200720.012 M526BRXXS7CYE1 release-keys"

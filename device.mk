@@ -1,38 +1,32 @@
 #
-# Copyright (C) 2023 The LineageOS Project
-#
-# Licensed under the Apache License, Version 2.0 (the "License");
-# you may not use this file except in compliance with the License.
-# You may obtain a copy of the License at
-#
-#      http://www.apache.org/licenses/LICENSE-2.0
-#
-# Unless required by applicable law or agreed to in writing, software
-# distributed under the License is distributed on an "AS IS" BASIS,
-# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-# See the License for the specific language governing permissions and
-# limitations under the License.
+# SPDX-FileCopyrightText: The LineageOS Project
+# SPDX-License-Identifier: Apache-2.0
 #
 
-# call the common setup
+# Inherit from common tree
 $(call inherit-product, device/samsung/sm7325-common/common.mk)
+$(call inherit-product, device/samsung/sm7325-common/products/sec_nfc.mk)
 
-# call the proprietary setup
+# Inherit proprietary blobs
 $(call inherit-product, vendor/samsung/m52xq/m52xq-vendor.mk)
 
-# Init files
+DEVICE_PATH := device/samsung/m52xq
+
+# Audio - Configuration
+PRODUCT_PACKAGES += \
+    audio_platform_info_diff.xml \
+    mixer_paths.xml
+
+# Display
+TARGET_SCREEN_DENSITY := 420
+
+# Fingerprint - Gestures
+PRODUCT_PACKAGES += uinput-sec-fp.kl
+
+# Init
 PRODUCT_PACKAGES += \
     init.m52xq.rc \
     wifi_firmware.rc
-
-# Audio
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/audio/mixer_paths.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mixer_paths.xml \
-    $(LOCAL_PATH)/configs/audio/audio_platform_info_diff.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_platform_info_diff.xml
-
-# Fingerprint Gestures
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/keylayout/uinput-sec-fp.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/uinput-sec-fp.kl
 
 # Overlays
 PRODUCT_PACKAGES += \
@@ -40,6 +34,8 @@ PRODUCT_PACKAGES += \
     SettingsProviderOverlayDevice \
     SystemUIOverlayDevice
 
-# Soong namespaces
-PRODUCT_SOONG_NAMESPACES += \
-    $(LOCAL_PATH)
+# Shipping level
+PRODUCT_SHIPPING_API_LEVEL := 30
+
+# Soong - Namespaces
+PRODUCT_SOONG_NAMESPACES += $(LOCAL_PATH)
