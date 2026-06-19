@@ -14,25 +14,24 @@
 # limitations under the License.
 #
 
-# call the common setup
+# Inherit from common tree
 $(call inherit-product, device/samsung/sm7325-common/common.mk)
 
-# call the proprietary setup
+# Inherit proprietary blobs
 $(call inherit-product, vendor/samsung/m52xq/m52xq-vendor.mk)
-
-# Init files
-PRODUCT_PACKAGES += \
-    init.m52xq.rc \
-    wifi_firmware.rc
 
 # Audio
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/audio/mixer_paths.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mixer_paths.xml \
     $(LOCAL_PATH)/configs/audio/audio_platform_info_diff.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_platform_info_diff.xml
 
-# Fingerprint Gestures
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/keylayout/uinput-sec-fp.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/uinput-sec-fp.kl
+# Fingerprint - Gestures
+PRODUCT_COPY_FILES += $(LOCAL_PATH)/configs/keylayout/uinput-sec-fp.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/uinput-sec-fp.kl
+
+# Init
+PRODUCT_PACKAGES += \
+    init.m52xq.rc \
+    wifi_firmware.rc
 
 # Overlays
 PRODUCT_PACKAGES += \
@@ -40,6 +39,5 @@ PRODUCT_PACKAGES += \
     SettingsProviderOverlayDevice \
     SystemUIOverlayDevice
 
-# Soong namespaces
-PRODUCT_SOONG_NAMESPACES += \
-    $(LOCAL_PATH)
+# Soong - Namespaces
+PRODUCT_SOONG_NAMESPACES += $(LOCAL_PATH)
