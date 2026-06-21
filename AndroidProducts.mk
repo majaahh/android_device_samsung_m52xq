@@ -14,4 +14,4 @@
 # limitations under the License.
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/lineage_m52xq.mk
+    $(LOCAL_DIR)/custom_m52xq.mk

@@ -19,6 +19,7 @@ PRODUCT_PACKAGES += \
 
 # Display
 TARGET_SCREEN_DENSITY := 420
+TARGET_SCREEN_WIDTH := 1080
 
 # Fingerprint - Gestures
 PRODUCT_PACKAGES += uinput-sec-fp.kl

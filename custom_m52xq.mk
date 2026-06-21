@@ -7,7 +7,7 @@
 $(call inherit-product, device/samsung/m52xq/device.mk)
 
 # Device identifier. This must come after all inclusions
-PRODUCT_NAME := lineage_m52xq
+PRODUCT_NAME := custom_m52xq
 PRODUCT_DEVICE := m52xq
 PRODUCT_MODEL := SM-M526BR
 
