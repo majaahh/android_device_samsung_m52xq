@@ -1,4 +1,4 @@
-# All blobs are from M526BXXS6CXJ2 (T), unless pinned
+# All blobs are from M526BXXS7CYE1 (T), unless pinned
 
 # Audio
 vendor/lib/hw/audio.primary.lahaina.so
