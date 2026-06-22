@@ -24,9 +24,7 @@ TARGET_SCREEN_DENSITY := 420
 PRODUCT_PACKAGES += uinput-sec-fp.kl
 
 # Init
-PRODUCT_PACKAGES += \
-    init.m52xq.rc \
-    wifi_firmware.rc
+PRODUCT_PACKAGES += init.m52xq.rc
 
 # Overlays
 PRODUCT_PACKAGES += \
