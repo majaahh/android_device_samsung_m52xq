@@ -29,9 +29,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += $(LOCAL_PATH)/configs/keylayout/uinput-sec-fp.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/uinput-sec-fp.kl
 
 # Init
-PRODUCT_PACKAGES += \
-    init.m52xq.rc \
-    wifi_firmware.rc
+PRODUCT_PACKAGES += init.m52xq.rc
 
 # Overlays
 PRODUCT_PACKAGES += \
