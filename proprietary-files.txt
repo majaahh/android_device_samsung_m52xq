@@ -16,6 +16,9 @@ vendor/firmware/tfa98xx.cnt
 vendor/lib/hw/audio.primary.lahaina.so
 vendor/lib/libspeakercalibration.so
 
+# Audio - Effects - Dolby
+vendor/lib/soundfx/libswdap.so
+
 # Bluetooth - Firmware - Configuration
 vendor/firmware/bt_nvm_loading.xml
 
