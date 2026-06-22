@@ -6,6 +6,9 @@ vendor/firmware/tfa98xx.cnt
 vendor/lib/hw/audio.primary.lahaina.so
 vendor/lib/libspeakercalibration.so
 
+# Audio modules
+vendor/lib/soundfx/libswdap.so
+
 # ACDB
 vendor/etc/audconf/OPEN/Bluetooth_cal.acdb
 vendor/etc/audconf/OPEN/General_cal.acdb
