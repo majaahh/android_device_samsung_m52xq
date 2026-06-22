@@ -1,14 +1,5 @@
 # All blobs are from M526BRXXS7CYE1 (T), unless pinned
 
-# Audio
-vendor/firmware/dax_param.bin
-vendor/firmware/tfa98xx.cnt
-vendor/lib/hw/audio.primary.lahaina.so
-vendor/lib/libspeakercalibration.so
-
-# Audio modules
-vendor/lib/soundfx/libswdap.so
-
 # ACDB
 vendor/etc/audconf/OPEN/Bluetooth_cal.acdb
 vendor/etc/audconf/OPEN/General_cal.acdb
@@ -19,7 +10,16 @@ vendor/etc/audconf/OPEN/Headset_cal.acdb
 vendor/etc/audconf/OPEN/Speaker_cal.acdb
 vendor/etc/audconf/OPEN/workspaceFile.qwsp
 
-# Bluetooth firmware
+# Audio
+vendor/firmware/dax_param.bin
+vendor/firmware/tfa98xx.cnt
+vendor/lib/hw/audio.primary.lahaina.so
+vendor/lib/libspeakercalibration.so
+
+# Audio - Dolby
+vendor/lib/soundfx/libswdap.so
+
+# Bluetooth - Firmware
 vendor/firmware/bt_nvm_loading.xml
 
 # Camera
@@ -132,7 +132,15 @@ vendor/lib64/hw/com.qti.chi.override.so
 vendor/lib64/libremosaic_wrapper.so
 vendor/lib64/libsec2qc_conversion.so
 
-# Fingerprint
+# Display - Touchscreen - Firmware
+vendor/firmware/tsp_synaptics/s3908_m52xq_boe.bin
+vendor/firmware/tsp_synaptics/s3908_m52xq_sdc.bin
+
+# Display - Touchscreen - Firmware - Rrecovery
+vendor/firmware/tsp_synaptics/s3908_m52xq_boe.bin:recovery/root/vendor/firmware/tsp_synaptics/s3908_m52xq_boe.bin
+vendor/firmware/tsp_synaptics/s3908_m52xq_sdc.bin:recovery/root/vendor/firmware/tsp_synaptics/s3908_m52xq_sdc.bin
+
+# Fingerprint - Dependencies
 vendor/lib64/libbauthserver.so
 vendor/lib64/libbauthtzcommon.so
 vendor/lib64/libegis_fp_normal_sensor_test.so
@@ -146,7 +154,7 @@ vendor/etc/qdcm_calib_data_ss_dsi_panel_S6E3FC3_AMS646YD01_FHD.xml
 vendor/etc/qdcm_calib_data_ss_dsi_panel_S6E3HAB_AMB667AN01_FHD.xml
 vendor/etc/qdcm_calib_data_ss_dsi_panel_SW83109_BF067XMM_FHD.xml
 
-# NFC
+# NFC - Firmware
 vendor/etc/nfc/sec_s3nrn4v_hwreg.bin
 vendor/etc/nfc/sec_s3nrn4v_swreg.bin
 vendor/firmware/nfc/sec_s3nrn4v_firmware.bin
@@ -163,15 +171,7 @@ vendor/lib/sensors.ssc.so
 vendor/lib64/sensors.grip.so
 vendor/lib64/sensors.ssc.so
 
-# Touchscreen firmware
-vendor/firmware/tsp_synaptics/s3908_m52xq_boe.bin
-vendor/firmware/tsp_synaptics/s3908_m52xq_sdc.bin
-
-# Touchscreen firmware (recovery)
-vendor/firmware/tsp_synaptics/s3908_m52xq_boe.bin:recovery/root/vendor/firmware/tsp_synaptics/s3908_m52xq_boe.bin
-vendor/firmware/tsp_synaptics/s3908_m52xq_sdc.bin:recovery/root/vendor/firmware/tsp_synaptics/s3908_m52xq_sdc.bin
-
-# Wifi firmware
+# WiFi - Firmware
 vendor/firmware/wpss.b00
 vendor/firmware/wpss.b01
 vendor/firmware/wpss.b02
