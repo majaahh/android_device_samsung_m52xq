@@ -24,7 +24,7 @@ TARGET_SCREEN_DENSITY := 420
 TARGET_ADDITIONAL_GRALLOC_10_USAGE_BITS := 0x2000U
 
 # Kernel
-TARGET_KERNEL_CONFIG := vendor/lineage-m52xq_defconfig
+TARGET_KERNEL_CONFIG := vendor/m52xq_eur_open_defconfig
 
 # Kernel - Modules
 BOARD_VENDOR_KERNEL_MODULES_LOAD := $(strip $(shell cat $(DEVICE_PATH)/modules.load))
