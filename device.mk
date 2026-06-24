@@ -20,13 +20,13 @@ $(call inherit-product, device/samsung/sm7325-common/common.mk)
 # Inherit proprietary blobs
 $(call inherit-product, vendor/samsung/m52xq/m52xq-vendor.mk)
 
-# Audio
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/audio/mixer_paths.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mixer_paths.xml \
-    $(LOCAL_PATH)/configs/audio/audio_platform_info_diff.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_platform_info_diff.xml
+# Audio - Configuration
+PRODUCT_PACKAGES += \
+    audio_platform_info_diff.xml \
+    mixer_paths.xml
 
 # Fingerprint - Gestures
-PRODUCT_COPY_FILES += $(LOCAL_PATH)/configs/keylayout/uinput-sec-fp.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/uinput-sec-fp.kl
+PRODUCT_PACKAGES += uinput-sec-fp.kl
 
 # Init
 PRODUCT_PACKAGES += init.m52xq.rc
