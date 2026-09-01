@@ -19,6 +19,9 @@ vendor/lib/libspeakercalibration.so
 # Audio - Effects - Dolby
 vendor/lib/soundfx/libswdap.so
 
+# Audio - Effects - SoundBooster - Configuration
+vendor/etc/SoundBoosterParam.txt
+
 # Bluetooth - Firmware - Configuration
 vendor/firmware/bt_nvm_loading.xml
 
