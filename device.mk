@@ -17,21 +17,21 @@ $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 $(call inherit-product, vendor/samsung/m52xq/m52xq-vendor.mk)
 
 # Audio - Configuration
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/audio/audio_platform_info_diff.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_platform_info_diff.xml \
-    $(LOCAL_PATH)/configs/audio/mixer_paths.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mixer_paths.xml
+PRODUCT_PACKAGES += \
+    audio_platform_info_diff.xml \
+    mixer_paths.xml
 
 # Branding
 PRODUCT_BRAND := samsung
 PRODUCT_MANUFACTURER := samsung
 
 # Display - Configuration
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/display/display_id_4630947232161729154.xml:$(TARGET_COPY_OUT_VENDOR)/etc/displayconfig/display_id_4630947232161729154.xml
+PRODUCT_PACKAGES += \
+    display_id_4630947232161729154.xml
 
 # Fingerprint - Gestures
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/keylayout/uinput-sec-fp.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/uinput-sec-fp.kl
+PRODUCT_PACKAGES += \
+    uinput-sec-fp.kl
 
 # GMS
 PRODUCT_GMS_CLIENTID_BASE := android-samsung
