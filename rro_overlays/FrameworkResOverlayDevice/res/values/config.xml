@@ -28,7 +28,7 @@
 
          @see https://www.w3.org/TR/SVG/paths.html#PathData
          -->
-    <string name="config_mainBuiltInDisplayCutout" translatable="false">M 0,0 H -12.95238095238095 V 34.28571428571429 H 12.95238095238095 V 0 H 0 Z @dp</string>
+    <string name="config_mainBuiltInDisplayCutout" translatable="false">M 540,0 H 506 V 90 H 574 V 0 H 540 Z @left</string>
 
     <!-- True if the device supports system navigation keys. -->
     <bool name="config_supportSystemNavigationKeys">true</bool>
