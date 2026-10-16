@@ -20,4 +20,4 @@ TARGET_BOARD_INFO_FILE := $(DEVICE_PATH)/configs/installer/board-info.txt
 TARGET_VENDOR_PROP += $(DEVICE_PATH)/configs/props/vendor.prop
 
 # Security
-VENDOR_SECURITY_PATCH := 2024-11-01
+VENDOR_SECURITY_PATCH := 2025-05-01
